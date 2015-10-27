@@ -1,0 +1,55 @@
+
+    private static string GetConnectionString()
+    {
+        return ConfigurationManager.ConnectionStrings[
+            "TrainingConnectionString"].ConnectionString; 
+    }
+
+	
+
+<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <connectionStrings>
+    <add name="TrainingConnectionString" connectionString="Data Source=localhost\sqlexpress;Initial Catalog=Training;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
+
+    <remove name="LocalSqlServer" />
+    <add name="LocalSqlServer" connectionString="Data Source=localhost\sqlexpress;Initial Catalog=Training;Integrated Security=True"
+     providerName="System.Data.SqlClient" />
+
+    <remove name="LocalSqlServer" />
+    <add name="LocalSqlServer"
+    connectionString="server=184.168.194.70;database=Training;uid=mj9119;password=Roent4Gen#9119;" />      
+      
+ </connectionStrings>
+  <system.web>
+    <roleManager enabled="true" />
+    <authentication mode="Forms" />
+    <compilation debug="true" targetFramework="4.0"/>
+  </system.web>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+from Pettigoats:
+  <connectionStrings>
+  <!-- <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Pettigoats-20140714094945;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Pettigoats-20140714094945.mdf" providerName="System.Data.SqlClient" />  -->
+  <add name="DefaultConnection" connectionString="Data Source=localhost\sqlexpress;Initial Catalog=PettigoatAcres; Integrated Security=SSPI" providerName="System.Data.SqlClient" /> 
+  <!--     <add name="DefaultConnection" connectionString="server=184.168.194.58;database=blackty_;uid=mr9876;password=Zorr4TH1S#4;" providerName="System.Data.SqlClient" /> -->
+    
+  <add name="EFDbGalleryContext" connectionString="Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=PettigoatAcres; Integrated Security=SSPI" providerName="System.Data.SqlClient" /> 
+  <!--   <add name="EFDbGalleryContext" connectionString="server=184.168.194.58;database=blackty_;uid=mr9876;password=Zorr4TH1S#4;" providerName="System.Data.SqlClient" /> -->
+  </connectionStrings>

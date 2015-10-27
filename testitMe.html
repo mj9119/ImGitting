@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--   comment -->
+<script 
+    data-tax=".25" 
+    data-amount="1.50" 
+    data-quantity="1"      
+	myVar = 1;
+	Console.WriteLine(“About Me”);
+	if (myVar == 2)
+		{
+		var data-name="First product in cart";
+		}
+	else
+		{
+		var data-name="Second product in cart";
+		}
+	
+    data-button="cart" src="https://www.paypalobjects.com/js/external/paypal-button-minicart.min.js?merchant=YGG2WP6EEBZ4J" async="async"
+></script>
+
+
+<h1>Rudimentary Paypal Test</h1>
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="FW9RH3LBZPBG6">
+<table>
+<tr><td><input type="hidden" name="on0" value="Name of drop-down menu">Name of drop-down menu</td></tr><tr><td>
+<select name="os0"   >
+	<option value="LB">LB $0.01 USD</option>
+	<option value="DB">DB $0.02 USD</option>
+	<option value="RD">RD $0.03 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<!--  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">  -->
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</body>
+</html>

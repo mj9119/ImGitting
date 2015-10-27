@@ -1,0 +1,33 @@
+static void Main(string[] args)
+{
+
+   StringBuilder sr = new StringBuilder();
+   sr.Append("1,1,1,2,3");
+   Console.WriteLine(sr.ToString());
+   for (int i = 0; i < sr.Length; i++)
+   {
+      for (int j = i+1; j < sr.Length; j++)
+      {
+      if (sr[j] == sr[i] && (sr[i] != ',' || sr[j] != ','))
+         {
+         sr.Remove(j, 1);
+
+         }
+         }
+         }
+         for (int i = 0,j=i+1; j < sr.Length; i++,j++)
+         {
+         if (sr[j] == sr[i])
+         {
+         sr.Remove(j, 1);
+         i--;
+         j--;
+   }
+}
+
+
+Console.WriteLine(sr.ToString());
+
+Console.ReadLine();
+}
+

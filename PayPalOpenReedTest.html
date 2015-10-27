@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--   comment -->
+<!--
+<script src="paypal-button.min.js?merchant=YGG2WP6EEBZ4J"
+    data-button="cart"
+    data-name="Product in your cart"
+    data-amount="1.00"
+    async
+></script>
+-->
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;	
+    // document.getElementById("demo").innerHTML = "You selected: " + x;
+	//var myVar = "Any ole text";
+	var otherVar ; 
+	
+	switch ( x ) {
+        case "Dark Brown":
+            var myVar = '<a href="pred_open_reed_Dark_Brown.jpg" width="150" height="200" > <img src="pred_open_reed_DB_small.jpg" alt="Smiley face" width="120" height="200"> </a>';
+            break;
+        case "Light Brown":
+            var myVar = '<a href="pred_open_reed_Light_Brown.jpg" width="150" height="200" > <img src="pred_open_reed_LB_small.jpg" alt="Smiley face" width="120" height="200"> </a>';
+            break;
+        case "Red":
+            var myVar = '<a href="pred_open_reed_Red.jpg" width="150" height="200" > <img src="pred_open_reed_RD_small.jpg" alt="Smiley face" width="120" height="200"> </a>';
+            break;			
+        default:
+            var myVar = 'Testing only .. the Weekend' ;
+    }
+	document.getElementById("demo").innerHTML = myVar; 
+}	
+	//document.getElementById("demo").innerHTML = myVar; 
+</script>
+
+<h1>Predator Open Reed example</h1>
+<p>
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QTV7WHWYMJLMY">
+
+<p id="demo">
+	<a href="pred_open_reed_Light_Brown.jpg" width="75" height="100" > 
+		<img src="pred_open_reed_LB_small.jpg" alt="Smiley face" width="120" height="200">
+	 </a>
+</p>
+
+<table>
+<tr><td><input type="hidden" name="on0" value="Colors">Colors:</td></tr><tr><td>
+	<select name="os0" id="mySelect" onchange="myFunction()" >
+	<option value="Light Brown">Light Brown $1.00</option>
+	<option value="Dark Brown">Dark Brown $1.00</option>
+	<option value="Red">Red $1.00</option>
+	</select> </td></tr>
+</table><br /> <br /> <br /> 
+  
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> 
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</p>
+
+
+
+</body>
+</html>
